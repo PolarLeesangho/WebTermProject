@@ -34,7 +34,7 @@ function UpdateUserInfo(){
                     email: res[0].email, 
                     phoneNum: res[0].phone_num,
                     address: res[0].address, 
-                    birthday: res[0].birthday + " 성별:" + res[0].gender
+                    birthday: res[0].birthday +  ((res[0].gender == 1 || res[0].gender == 3)?" (남성)":" (여성)")
                 })
             }
             console.log(setUser);
@@ -49,11 +49,11 @@ function makeHtml(user, setUser, address, setAddress, edit, setEdit){
         <div className='page'>
         <div className='subpage'>
             <h1>나의 기본 정보</h1>
-            <div>            
-                <input type="text" id="review" name="name" placeholder={user.name}/>
+            <div>     
+                {user.name}
             </div>
             <div>            
-                <input type="text" id="id" name="id" placeholder={user.uid}/>
+                {user.uid}
             </div>
             <div>            
                 <input type="text" id="password" name="password" placeholder='비밀번호(8~16자리 영문/ 순자 조합)'/>
@@ -65,7 +65,7 @@ function makeHtml(user, setUser, address, setAddress, edit, setEdit){
                 <input type="text" id="phone-num" name="phone-num" placeholder={user.phoneNum}/>
             </div>
             <div>            
-                <input type="text" id="birthday" name="birthday" placeholder={user.birthday}/>
+                {user.birthday}
             </div>
             <div>            
                 <input type="text" id="email" name="email" placeholder={user.email}/>
