@@ -20,7 +20,7 @@ const MainBody = () =>
             setCurrentIndex((prevIndex) => (prevIndex + 1) % slideCount);
         };
 
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextSlide, 3000);
 
     return () => {
         clearInterval(interval);
