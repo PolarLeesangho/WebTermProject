@@ -83,3 +83,19 @@
 .menu-item:hover .button-container {
   display: block;
 }
+
+/* 이미지 크기 조정 */
+.menu-item-image { 
+  width: 200px;   
+  height: 200px;
+}
+
+/* 이름의 글자 크기 조정 */
+.menu-item-name {
+  font-size: 24px; 
+}
+
+/* 가격의 글자 크기 조정 */
+.menu-item-price {
+  font-size: 20px; 
+}
